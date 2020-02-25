@@ -179,7 +179,7 @@ abstract class ACPermissionModifierCommand extends HierarchySubCommand implement
 		}
 	}
 
-	abstract protected function doOperationOnRole(Role $member, Permission $permission): void;
+	abstract protected function doOperationOnRole(Role $member, $permission): void;
 
-	abstract protected function doOperationOnMember(BaseMember $member, Permission $permission): void;
+	abstract protected function doOperationOnMember(BaseMember $member, $permission): void;
 }
