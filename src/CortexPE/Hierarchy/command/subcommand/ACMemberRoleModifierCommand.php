@@ -75,9 +75,9 @@ abstract class ACMemberRoleModifierCommand extends HierarchySubCommand implement
 		$role = $args["role"];
 
 		if($role instanceof Role) {
-			if(!$this->doHierarchyPositionCheck($member) || !$this->doHierarchyPositionCheck($role)) {
-				return;
-			}
+			//if(!$this->doHierarchyPositionCheck($member) || !$this->doHierarchyPositionCheck($role)) {
+			//	return;
+			//}
 
 			$formats = [
 				"member" => $member->getName(),
