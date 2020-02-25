@@ -84,7 +84,7 @@ abstract class ACPermissionModifierCommand extends HierarchySubCommand implement
 		/** @var Permission|null $permission */
 		$permission = $args["permission"];
 
-		if($permission instanceof Permission) {
+		//if($permission instanceof Permission) {
 			switch($args["targetType"] ?? "undefined") {
 				case TargetEnumArgument::TARGET_MEMBER:
 					foreach($args["target"] as $target){
@@ -127,12 +127,12 @@ abstract class ACPermissionModifierCommand extends HierarchySubCommand implement
 						}
 					}
 					break;
-			}
-		} else {
-			$this->sendFormattedMessage("err.unknown_permission");
-		}
+		//	}
+		//} else {
+		//	$this->sendFormattedMessage("err.unknown_permission");
+		//}
 	}
-
+	}
 	public function sendForm(): void {
 		if($this->currentSender instanceof Player) {
 			$this->currentSender->sendForm(new ModalForm(
